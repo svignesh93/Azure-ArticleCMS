@@ -20,4 +20,4 @@
 
 *Detail how the app and any other needs would have to change for you to change your decision in the last section.*
 
-*If the web app needs more control over which OS it needs to run and also if we want to manage it ourself to make our own customized environment including runtime, middleware, custom OS, own security model or softwares, etc for the app to run on. But for this article cms web app, the Azure App Service would be the most suitable option in terms of cost and maintenance.
+*If the web app needs more control over which OS it needs to run and also if we want to manage it ourself to make our own customized environment including runtime, middleware, custom OS, own security model or softwares, etc for the app to run on. But for this article cms web app, the Azure App Service would be the most suitable option in terms of cost and maintenance.*
