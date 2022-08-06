@@ -60,7 +60,7 @@ def post(id):
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        app.logger.info('User is authorized')
+        app.logger.warning('User is authorized')
         return redirect(url_for('home'))
     form = LoginForm()
     if form.validate_on_submit():
@@ -101,7 +101,7 @@ def authorized():
         user = User.query.filter_by(username="admin").first()
         login_user(user)
         _save_cache(cache)
-        app.logger.info('User is authorized')
+        app.logger.warning('User is authorized')
     return redirect(url_for('home'))
 
 @app.route('/logout')
@@ -111,7 +111,7 @@ def logout():
         # Wipe out user and its token cache from session
         session.clear()
         # Also logout from your tenant's web session
-        app.logger.info('User has logged out')
+        app.logger.warning('User has logged out')
         return redirect(
             Config.AUTHORITY + "/oauth2/v2.0/logout" +
             "?post_logout_redirect_uri=" + url_for("login", _external=True))
